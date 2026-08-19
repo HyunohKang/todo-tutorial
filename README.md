@@ -2,6 +2,8 @@
 
 [Claude Code Playbook](https://docs.claude-hunt.com) 강의의 실습용 저장소입니다. Next.js 와 shadcn/ui 로 시작하는 작은 Todo 앱을 단계별로 발전시키며 Claude Code 사용법을 익힙니다.
 
+할일 추가, 검색, 카테고리 필터, 정렬 기능을 갖춘 Todo 앱으로, Server Components 를 우선하고 클라이언트 상태는 최소화하는 방식으로 구현되어 있습니다.
+
 ## 관련 링크
 
 - 강의 본문: https://docs.claude-hunt.com
@@ -34,6 +36,17 @@ bun run start      # 빌드 결과 실행
 bun run lint       # ESLint
 bun run typecheck  # tsc --noEmit
 bun run format     # Prettier 포맷팅
+bun run test       # Vitest 테스트 실행
+bun run test:watch # Vitest watch 모드
+```
+
+## 프로젝트 구조
+
+```
+app/          # Next.js App Router 페이지
+components/   # Todo 관련 컴포넌트 및 shadcn/ui 컴포넌트 (components/ui)
+hooks/        # 커스텀 훅 (use-todos 등)
+lib/          # 타입 정의 및 유틸리티 함수
 ```
 
 ## 챕터별 시작 브랜치

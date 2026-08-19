@@ -12,9 +12,10 @@
 - Next.js 16 (App Router, Turbopack)
 - React 19
 - Tailwind CSS v4
-- shadcn/ui (radix-maia 스타일, taupe 베이스)
+- shadcn/ui (radix-mira 스타일, taupe 베이스, phosphor 아이콘)
+- Vitest + Testing Library (jsdom)
 - TypeScript / ESLint / Prettier
-- 패키지 매니저: bun 1.3.6
+- 패키지 매니저: bun
 
 ## 시작하기
 
@@ -34,6 +35,8 @@ bun run start      # 빌드 결과 실행
 bun run lint       # ESLint
 bun run typecheck  # tsc --noEmit
 bun run format     # Prettier 포맷팅
+bun run test       # Vitest 1회 실행
+bun run test:watch # Vitest watch 모드
 ```
 
 ## 챕터별 시작 브랜치
@@ -53,6 +56,12 @@ bunx --bun shadcn@latest add button
 ```
 
 `components/ui` 디렉토리에 컴포넌트가 추가됩니다.
+
+`@magicui` 레지스트리도 `components.json` 에 등록되어 있어 아래처럼 쓸 수 있습니다.
+
+```bash
+bunx --bun shadcn@latest add @magicui/aurora-text
+```
 
 ## 컴포넌트 사용
 
